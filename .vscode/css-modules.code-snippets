@@ -1,0 +1,7 @@
+{
+  "importCSSFromIndex": {
+    "prefix": "isi",
+    "body": ["import * as styles from './index.module.css'", ""],
+    "description": "Import css modules index file"
+  }
+}

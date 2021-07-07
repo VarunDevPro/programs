@@ -1,0 +1,9 @@
+/* purgecss start ignore */
+@tailwind base;
+/* purgecss end ignore */
+
+@tailwind components;
+@tailwind utilities;
+
+/* This don't work, so import it in gatsby-browser.js */
+/* @import './prism.css'; */

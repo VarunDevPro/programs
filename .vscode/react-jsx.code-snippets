@@ -1,0 +1,36 @@
+{
+  "reactFunctionalExportComponent": {
+    "prefix": "rfc",
+    "body": [
+      "import React from 'react'",
+      "",
+      "export const ${1:${TM_FILENAME_BASE}} = () => {",
+      "\treturn (",
+      "\t\t<>",
+      "\t\t\t$0",
+      "\t\t</>",
+      "\t)",
+      "}",
+      "",
+      ""
+    ],
+    "description": "Creates a React Functional Component with ES7 module system"
+  },
+  "reactFunctionalExportComponentIndex": {
+    "prefix": "rfci",
+    "body": [
+      "import React from 'react'",
+      "",
+      "export const ${TM_DIRECTORY/.*\\/(.*)$/${1:/capitalize}/g} = () => {",
+      "\treturn (",
+      "\t\t<>",
+      "\t\t\t$0",
+      "\t\t</>",
+      "\t)",
+      "}",
+      "",
+      ""
+    ],
+    "description": "Creates a React Functional Component with ES7 module system"
+  }
+}

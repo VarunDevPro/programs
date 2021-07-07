@@ -1,6 +1,9 @@
+const POSTS_BASE_PATH = `allPosts`;
+
 module.exports = {
+  pathPrefix: `/programs`,
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://varundevpro.com",
     title: "Programs",
   },
   plugins: [
@@ -12,9 +15,17 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "pages",
-        path: "./src/pages/",
+        path: `${__dirname}/src/pages/`,
       },
       __key: "pages",
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: POSTS_BASE_PATH,
+        path: `${__dirname}/src/posts/`,
+      },
+      __key: "posts",
     },
   ],
 };
