@@ -1,0 +1,57 @@
+---
+title: Code for finding GCD or HCF
+description: A program to find GCD or HCF of given numbers.
+date: 2021-08-09T16:00:00.000Z
+published: true
+---
+
+**Note: GCD and HCF are same**
+**GCD:** Greatest common divisor
+**HCF:** Highest common factor
+
+### Using Recursion
+
+```js
+function gcd(a, b) {
+  if (b === 0) return a;
+  return gcd(b, a % b);
+}
+
+gcd(15, 20); // 5
+```
+
+### Using FOR loop
+
+```js
+function gcd(a, b) {
+  let hcf = -1;
+
+  for (let i = 1; i <= a && i <= b; i++) {
+    if (a % i == 0 && b % i == 0) {
+      hcf = i;
+    }
+  }
+
+  return hcf;
+}
+
+gcd(15, 20); // 5
+```
+
+### Using WHILE loop
+
+```js
+function gcd(a, b) {
+  while (a != b) {
+    if (a > b) {
+      a -= b;
+    } else {
+      b -= a;
+    }
+  }
+
+  return a;
+}
+
+gcd(15, 20); // 5
+```

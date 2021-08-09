@@ -1,0 +1,37 @@
+---
+title: Code for calculating factorial
+description: A program to calculate factorial of a given number.
+date: 2021-08-09T16:00:00.000Z
+published: true
+---
+
+```
+5! -> 5*4*3*2*1
+```
+
+### Using Loop
+
+```js
+function factorial(n) {
+  let res = 1,
+    i;
+  for (let i = 2; i <= n; i++) res *= i;
+  return res;
+}
+
+factorial(5); // 120
+```
+
+### Using Recursion
+
+```js
+function factorial(n) {
+  if (n <= 1) {
+    return 1;
+  }
+
+  return n * factorial(n - 1);
+}
+
+factorial(5); // 120
+```

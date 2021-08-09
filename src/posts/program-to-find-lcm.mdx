@@ -1,0 +1,43 @@
+---
+title: Code for finding LCM or LCD
+description: A program to find LCM or LCD of given numbers.
+date: 2021-08-09T16:00:00.000Z
+published: true
+---
+
+**Note: LCD and LCM are same**
+**LCD:** Least common divisor
+**LCM:** Least Common Multiple
+
+### Using LOOP
+
+```js
+function lcm(a, b) {
+  let min = a > b ? a : b;
+
+  // while loop
+  while (true) {
+    if (min % a == 0 && min % b == 0) {
+      return min;
+    }
+    min++;
+  }
+}
+
+lcm(15, 20); // 60
+```
+
+### Using GCD
+
+```js
+function gcd(a, b) {
+  if (b === 0) return a;
+  return gcd(b, a % b);
+}
+
+function lcm(a, b) {
+  return (a * b) / gcd(a, b);
+}
+
+lcm(15, 20); // 60
+```
